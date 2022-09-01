@@ -74,15 +74,14 @@ function About() {
         </div>
         {/* bg circles */}
         <div className="z-10 absolute flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="bg-blue-400 opacity-50 w-80 aspect-square rounded-full blur-[500px]"></div>
-          <div className="bg-red-400 opacity-50  w-80 aspect-square rounded-full blur-[500px]"></div>
+          <div className="opacity-50 w-80 aspect-square rounded-full blur-[500px] bg-radial from-[#d16f974d] via-[#00000000] to-[#00000000]"></div>
+          <div className="opacity-50  w-80 aspect-square rounded-full blur-[500px]"></div>
         </div>
-
       </div>
 
       {/* Section 2 */}
-      <div className="h-[50vh] m-auto flex flex-col justify-between">
-        <div className="h-[90%] w-full  md:h-screen p-5">
+      <div className="h-[50vh] m-auto text-center flex flex-col justify-between">
+        <div className="h-[90%] w-full md:h-screen p-5">
           <div className="bg-[#1a1a1a] h-full rounded-xl flex flex-col justify-evenly items-center p-5">
             <div className="w-[40%] aspect-square border-2 rounded-full "></div>
             <div className="text-white">
@@ -93,7 +92,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="text-white h-[10%] text-base lg:text-2xl font-thin  md:w-full lg:px-2 flex justify-center">-Co-founders</div>
+        <div className="text-white h-[10%] text-base lg:text-2xl font-thin  md:w-full lg- lg:px-2 flex justify-center">-Co-founders</div>
       </div>
       
 

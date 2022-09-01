@@ -6,3 +6,11 @@
 .font-sans {
   font-family: Gilmer, 'Maven Pro', Arial, Helvetica, sans-serif,  sans-serif;
 }
+
+.circle-1{
+  background-image: radial-gradient(rgba(209, 111, 151, 0.3), transparent, transparent);
+}
+
+.circle-2{
+  background-image: radial-gradient(rgba(91, 128, 200, 0.3), transparent, transparent);
+}
