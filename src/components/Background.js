@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Background = () => {
+const Background = ({top, left}) => {
   return (
-    <div className='-mt-[40rem] '>
-        <div className='absolute left-[2vw]'>
-            <div className='circle-1 w-[80vw] h-[80vw] rounded-full' ></div>
+    <div className={`absolute left-1/2 top-[${top}] lg:top-0`}>
+        <div className='absolute left-[-25vw]'>
+            <div className='circle-1 w-[100vw] h-[100vw] lg:w-[80vw] lg:h-[80vw] rounded-full'></div>
         </div>
-        <div className='absolute right-[2vw] '>
-            <div className='circle-2 w-[80vw] h-[80vw] rounded-full'></div>
+        <div className='absolute right-[-25vw] '>
+            <div className='circle-2 w-[100vw] h-[100vw] lg:w-[80vw] lg:h-[80vw] rounded-full'></div>
         </div>
     </div>
   )

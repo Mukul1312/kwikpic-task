@@ -117,7 +117,7 @@ function Home() {
           </div>
         </div>
         {/* bg circles */}
-        <Background />
+        <Background top={'30%'} />
         {/* <div className="z-96 absolute ">
           <div className="opacity-50 w-80 h-80 aspect-square rounded-full blur-[500px] bg-radial from-[#d16f974d] via-[#00000000] to-[#00000000]"></div>
           <div className="opacity-50  w-80 aspect-square rounded-full blur-[500px] bg-radial from-[#5b80c84d] via-[#00000000] to-[#00000000] "></div>

@@ -8,8 +8,10 @@ import img3 from "../assets/partners/3.png";
 import img4 from "../assets/partners/4.png";
 import img5 from "../assets/partners/5.png";
 import { ImUser } from "react-icons/im";
+import Background from "../components/Background";
 function About() {
   let path = useRef(null);
+  let targetImg = [useRef(null),useRef(null),useRef(null),useRef(null),useRef(null),]
   let target1 = useRef(null);
   let target2 = useRef(null);
   let target3 = useRef(null);
@@ -28,6 +30,7 @@ function About() {
           scrub: true,
           start: "top " - path.offsetTop,
           end: "bottom top",
+          // markers: true
         },
       })
       .to(
@@ -57,10 +60,19 @@ function About() {
       );
   },[]);
 
+  const renderPartner = (img) => (
+    <img
+      className="absolute scale-[0.2]"
+      ref={(el) => (target1 = el)}
+      src={img}
+      alt="1"
+    />
+  )
+
   return (
     <div className="bg-black tracking-wider overflow-x-clip">
       {/* Section 1 */}
-      <div className="h-[50vh] pt-40  bg-[#1a1a1a] lg:h-screen relative">
+      <div className="h-[50vh] pt-[10rem] lg:pt-60  bg-black lg:h-screen relative">
         <div className="z-20 h-60  rounded-lg relative  text-white flex flex-col justify-center items-center">
           <p className="mt-1 lg:mt-5 text-4xl lg:text-7xl font-bold">
             We are building
@@ -72,25 +84,22 @@ function About() {
             in the world of crypto
           </p>
         </div>
-        {/* bg circles */}
-        <div className="z-10 absolute flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="opacity-50 w-80 aspect-square rounded-full blur-[500px] bg-radial from-[#d16f974d] via-[#00000000] to-[#00000000]"></div>
-          <div className="opacity-50  w-80 aspect-square rounded-full blur-[500px]"></div>
-        </div>
+        <Background top={'10%'} />
       </div>
 
       {/* Section 2 */}
-      <div className="h-[50vh] m-auto text-center flex flex-col justify-between">
-        <div className="h-[90%] w-full md:h-screen p-5">
-          <div className="bg-[#1a1a1a] h-full rounded-xl flex flex-col justify-evenly items-center p-5">
-            <div className="w-[40%] aspect-square border-2 rounded-full "></div>
-            <div className="text-white">
-              <p className="text-center">
+      <div className="h-[50vh] lg:h-[100vh] m-auto text-center bg-black flex flex-col items-center justify-between">
+        <div className="h-[90%] w-full lg:w-fit  md:h-screen p-5 lg:p-10">
+          <div className="bg-[#1a1a1a] lg:w-[25rem] h-full lg:h-[30rem] rounded-xl flex flex-col justify-evenly items-center p-5">
+            <div className="w-[40%] lg:w-[20%] aspect-square border-2 rounded-full "></div>
+            <div className="lg:w-[20rem] ">
+              <p className="text-center text-white">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo qui
                 quia explicabo, facilis, ad sed ipsum mollitia quaerat,
               </p>
             </div>
           </div>
+          {/* <Background /> */}
         </div>
         <div className="text-white h-[10%] text-base lg:text-2xl font-thin  md:w-full lg- lg:px-2 flex justify-center">-Co-founders</div>
       </div>
@@ -107,7 +116,7 @@ function About() {
             the way.
           </p>
         </div>
-        <div className="w-auto hidden lg:block md:w-[40%] mt-10 h-auto">
+        <div className="w-auto overflow-hidden block md:w-[40%] mt-10 h-auto">
           <svg
             ref={(el) => (svg = el)}
             className="w-full h-full"
@@ -118,7 +127,7 @@ function About() {
               id="mainPath"
               ref={(el) => (path = el)}
               strokeDasharray="5,5"
-              d=" M 510 137 A 78 190 100 1 1 510 135 z"
+              d="M 510 137 A 78 190 100 1 1 510 135 z"
             />
           </svg>
           <img
@@ -134,7 +143,7 @@ function About() {
             alt="2"
           />
           <img
-            className="absolute scale-[0.7]"
+            className="absolute scale-[0.2]"
             ref={(el) => (target3 = el)}
             src={img3}
             alt="3"
@@ -153,29 +162,9 @@ function About() {
           />
         </div>
       </div>
-      <div className="h-32"></div>
+      <div className="h-[30rem]"></div>
     </div>
   );
 }
 
 export default About;
-
-// section2 
-{/* <div className="h-[50vh] bg-yellow-500 md:h-screen p-5">
-        <div className=" relative">
-          <div className="absolute w-1/4 bg-black h-full top-0 left-1/2 -translate-x-1/2 flex flex-col item-center" >
-            <div className="w-full aspect-square border-2 rounded-full flex justify-center items-start"><ImUser color={'white'} size={80} /></div>
-            <div className="text-white bg-emerald-300 text-base lg:text-2xl font-semibold px-2 my-16 flex justify-center w-[200%] md:w-full h-[45%] overflow-hidden">
-              {" "}
-              <p className="text-center">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo qui
-                quia explicabo, facilis, ad sed ipsum mollitia quaerat, similique
-                dicta aliquam aspernatur enim hic velit! Reprehenderit 
-              </p>
-            </div>
-            <div className="text-white text-base lg:text-2xl font-thin w-[200%] md:w-full lg:px-2 flex justify-center">
-              -Co-founders
-            </div>
-          </div>
-        </div>
-      </div> */}
