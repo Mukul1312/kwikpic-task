@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import { AiOutlineArrowDown } from 'react-icons/ai'
+import { HiArrowNarrowRight } from 'react-icons/hi'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -9,7 +9,7 @@ function Navbar() {
   const location = useLocation()
   const [expanded, setExpanded] = useState(false)
   return (
-    <div className={`fixed z-50 top-0 w-screen text-white ${expanded ? "h-full bg-black flex-col" : "h-[6.25rem] bg-transparent items-start"} flex font-semibold text-base lg:text-xl backdrop-blur-sm border-b-[1px] border-white/20 tracking-wide transition-all`}>
+    <div className={`fixed z-50 top-0 w-screen text-white ${expanded ? "h-full bg-black flex-col" : "h-[5.5rem] bg-transparent items-start"} flex font-[500] text-base lg:text-xl backdrop-blur-sm border-b-[1px] border-white/20 tracking-wide transition-all`}>
       <div className="lg:hidden sm:flex w-full flex items-center justify-between px-10 h-[6.25rem]">
         <img src={logo} alt="logo" className="h-[2.1rem]" />
         <GiHamburgerMenu size={30} onClick={()=>setExpanded(!expanded)}/>
@@ -28,8 +28,8 @@ function Navbar() {
           </div>
         </div>
       }
-      <div className="w-[75%] justify-center items-center lg:flex hidden h-[6.25rem]">
-        <div className="w-auto flex space-x-10 px-10 text-gray-400">
+      <div className="w-[75%] justify-center items-center lg:flex hidden h-[5.5rem]">
+        <div className="w-auto flex space-x-10 px-10 text-gray-400 items-center">
           <img src={logo} alt="logo" className="h-[2.1rem]" />
           <p> <Link to="/" className={`${location.pathname==="/" && "text-white"}`}>Home</Link> </p>
           <p> <Link to="/about" className={`${location.pathname==="/about" && "text-white"}`}>About us</Link> </p>
@@ -39,11 +39,11 @@ function Navbar() {
           <p>Blog</p>
         </div>
       </div>
-      <button onClick={()=>(window.open("https://github.com/fibre-ether/kwikpic-task", '_blank', 'noopener,noreferrer'))} className="w-[20%] lg:flex hidden items-center h-[6.25rem]">
+      <button onClick={()=>(window.open("https://github.com/fibre-ether/kwikpic-task", '_blank', 'noopener,noreferrer'))} className="w-[20%] lg:flex hidden items-center h-[5.5rem]">
         <div className="bg-[#1a1a1a] h-[60%] rounded-full flex items-center w-auto">
-          <p className="mx-6 text-base">Download Now</p>
+          <p className="mx-6 text-base">Start Earning</p>
           <div className="h-[80%] mr-2 bg-white text-black aspect-square rounded-full flex justify-center items-center border-[6px] border-black">
-            <AiOutlineArrowDown size={23}/>
+            <HiArrowNarrowRight size={20} />
           </div>
         </div>
       </button>
