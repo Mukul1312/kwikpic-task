@@ -125,7 +125,7 @@ function Home() {
       </div>
 
       {/* Section 2 */}
-      <div className="h-auto flex lg:text-center sm:text-left">
+      <div className="mt-[2rem] h-auto flex lg:text-center sm:text-left">
         <div className="sticky top-0 h-screen w-[45%] hidden lg:flex justify-center items-center">
           <img src={devices} alt="devices" className="scale-50" />
         </div>

@@ -11,7 +11,7 @@ import { ImUser } from "react-icons/im";
 import Background from "../components/Background";
 function About() {
   let path = useRef(null);
-  let targetImg = [useRef(null),useRef(null),useRef(null),useRef(null),useRef(null),]
+  let targetImg = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null),]
   let target1 = useRef(null);
   let target2 = useRef(null);
   let target3 = useRef(null);
@@ -58,7 +58,7 @@ function About() {
         { motionPath: { path: path, align: path, alignOrigin: [0.5, 0.5] } },
         -20
       );
-  },[]);
+  }, []);
 
   const renderPartner = (img) => (
     <img
@@ -103,10 +103,10 @@ function About() {
         </div>
         <div className="text-white h-[10%] text-base lg:text-2xl font-thin  md:w-full lg- lg:px-2 flex justify-center">-Co-founders</div>
       </div>
-      
+
 
       {/* Section 3 */}
-      <div className="h-1/2 md:flex mt-10">
+      <div className="h-1/2  relative md:flex mt-10">
         <div className="w-full md:w-[60%] h-full flex flex-col justify-center pl-5 md:pr-16 md:pl-36 space-y-10 bg-black">
           <p className="text-4xl lg:text-7xl font-bold text-white">Our Partners</p>
           <p className="text-base lg:text-xl text-gray-400 ">
@@ -116,7 +116,7 @@ function About() {
             the way.
           </p>
         </div>
-        <div className="w-auto overflow-hidden block md:w-[40%] mt-10 h-auto">
+        <div className="w-auto right-[-1rem] lg:right-[-10rem] absolute block md:w-[40%] mt-10 h-auto">
           <svg
             ref={(el) => (svg = el)}
             className="w-full h-full"
